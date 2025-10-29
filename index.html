@@ -1,0 +1,774 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BachtiarNoval- Portofolio</title>
+
+    <!-- Tailwind CSS CDN  -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- AOS Animation Library  -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      // Navbar toggle
+      const menuButton = document.querySelector("nav button");
+      const navLinks = document.querySelector("nav .md\\:flex");
+
+      menuButton.addEventListener("click", () => {
+        navLinks.classList.toggle("hidden");
+        navLinks.classList.toggle("flex");
+        navLinks.classList.toggle("flex-col");
+        navLinks.classList.toggle("space-y-4");
+        navLinks.classList.toggle("bg-black");
+        navLinks.classList.toggle("p-4");
+      });
+    </script>
+
+    <!-- Google Fonts  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      * {
+        font-family: "Inter", sans-serif;
+      }
+
+      body {
+        background-color: #0a0a0a;
+        color: #ffffff;
+      }
+
+      .gradient-text {
+        background: linear-gradient(90deg, #ffd700 0%, #ffa500 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+      }
+
+      .btn-primary {
+        background-color: #ffd700;
+        color: #000000;
+        font-weight: 600;
+        padding: 12px 32px;
+        border-radius: 4px;
+        transition: all 0.3s ease;
+      }
+
+      .btn-primary:hover {
+        background-color: #ffa500;
+        transform: translateY(-2px);
+      }
+
+      .nav-link {
+        color: #ffffff;
+        font-size: 14px;
+        font-weight: 500;
+        transition: color 0.3s ease;
+      }
+
+      .nav-link:hover {
+        color: #ffd700;
+      }
+
+      .card-dark {
+        background-color: #1a1a1a;
+        border: 1px solid #2a2a2a;
+        border-radius: 8px;
+        padding: 24px;
+        transition: all 0.3s ease;
+      }
+
+      .card-dark:hover {
+        border-color: #ffd700;
+        transform: translateY(-4px);
+      }
+
+      .star-rating {
+        color: #ffd700;
+      }
+
+      .section-title {
+        font-size: 48px;
+        font-weight: 800;
+        line-height: 1.2;
+      }
+
+      @media (max-width: 768px) {
+        .section-title {
+          font-size: 32px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Navigation  -->
+    <nav
+      class="fixed top-0 left-0 right-0 z-50 bg-black/80 backdrop-blur-md border-b border-gray-800"
+    >
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex items-center justify-between h-16">
+          <div class="flex items-center space-x-2">
+            <div
+              class="w-8 h-8 bg-yellow-400 rounded flex items-center justify-center"
+            >
+              <span class="text-black font-bold text-sm">BNA</span>
+            </div>
+            <span class="text-white font-semibold">Portofolio</span>
+          </div>
+
+          <div class="hidden md:flex items-center space-x-8">
+            <a href="#home" class="nav-link">HOME</a>
+            <a href="#about" class="nav-link">ABOUT</a>
+            <a href="#services" class="nav-link">SERVICES</a>
+            <a href="#portfolio" class="nav-link">PORTOFOLIO</a>
+            <a href="#contact" class="nav-link">CONTACT</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Section  -->
+    <section
+      id="home"
+      class="min-h-screen flex items-center pt-20 px-4 sm:px-6 lg:px-8"
+    >
+      <div class="max-w-7xl mx-auto w-full">
+        <div class="grid md:grid-cols-2 gap-12 items-center">
+          <div data-aos="fade-right">
+            <p class="text-gray-400 text-sm mb-4 tracking-wider">PORTOFOLIO</p>
+            <h1 class="section-title mb-6">Bachtiar Noval Aditya</h1>
+            <div class="flex flex-wrap gap-4 mb-8 text-sm text-gray-400">
+              <span>PHP Developer</span>
+              <span>•</span>
+              <span>Laravel Framework</span>
+              <span>•</span>
+              <span>HTML & CSS</span>
+              <span>•</span>
+              <span>Web Development</span>
+            </div>
+            <p class="text-gray-300 mb-8 leading-relaxed max-w-xl">
+              Halo, Saya Bachtiar Noval Aditya Saya adalah seorang Web Developer
+              yang berfokus pada pembuatan aplikasi berbasis web menggunakan PHP
+              dan Laravel. Saya juga mahir menggunakan HTML dan CSS untuk
+              membangun tampilan yang rapi, modern, dan responsif.
+            </p>
+            <button class="btn-primary">SELENGKAPNYA</button>
+
+            <div class="grid grid-cols-2 sm:grid-cols-4 gap-6 mt-12">
+              <div class="card-dark">
+                <div class="flex items-center space-x-1 mb-2">
+                  <span class="star-rating">★★★★★</span>
+                </div>
+                <p class="text-xs text-gray-400">PHP</p>
+              </div>
+              <div class="card-dark">
+                <div class="flex items-center space-x-1 mb-2">
+                  <span class="star-rating">★★★★★</span>
+                </div>
+                <p class="text-xs text-gray-400">Laravel</p>
+              </div>
+              <div class="card-dark">
+                <div class="flex items-center space-x-1 mb-2">
+                  <span class="star-rating">★★★★☆</span>
+                </div>
+                <p class="text-xs text-gray-400">JavaScript</p>
+              </div>
+              <div class="card-dark">
+                <div class="flex items-center space-x-1 mb-2">
+                  <span class="star-rating">★★★★☆</span>
+                </div>
+                <p class="text-xs text-gray-400">HTML & CSS</p>
+              </div>
+            </div>
+          </div>
+
+          <div data-aos="fade-left" class="flex justify-center">
+            <div class="relative">
+              <img
+                src="images/image5.png"
+                alt=""
+                class="rounded-lg w-full max-w-md h-[500px]"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section with LuminUp  -->
+    <section
+      class="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-black to-gray-900"
+    >
+      <div class="max-w-7xl mx-auto">
+        <div class="grid md:grid-cols-2 gap-12 items-center">
+          <div data-aos="fade-right">
+            <p class="text-gray-400 text-sm mb-4 tracking-wider">
+              01. Tentang Saya
+            </p>
+            <h2 class="section-title mb-6">
+              Web Developer &<br />
+              Programmer
+            </h2>
+            <p class="text-gray-300 mb-8 leading-relaxed">
+              Saya adalah seorang web developer yang berfokus pada pengembangan
+              aplikasi berbasis web menggunakan
+              <strong>PHP</strong> dan <strong>Laravel</strong>. Saya juga
+              memiliki kemampuan dalam <strong>JavaScript</strong> dan
+              <strong>CSS</strong>
+              untuk menciptakan tampilan antarmuka yang dinamis, interaktif, dan
+              responsif. Saya selalu bersemangat untuk mempelajari hal baru dan
+              mengembangkan solusi yang bermanfaat melalui kode.
+            </p>
+            <button class="btn-primary">PELAJARI LEBIH LANJUT</button>
+          </div>
+
+          <div data-aos="fade-left" class="relative">
+            <div class="card-dark p-12">
+              <div class="text-6xl font-bold mb-4 gradient-text">SiLaundry</div>
+              <p class="text-gray-400 text-sm">Project Unggulan</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Me Detail Section  -->
+    <section class="py-20 px-4 sm:px-6 lg:px-8">
+      <div class="max-w-7xl mx-auto">
+        <div class="grid md:grid-cols-2 gap-12 items-center">
+          <div data-aos="fade-right" class="order-2 md:order-1">
+            <img
+              src="images/image6.png"
+              alt="About Me"
+              class="rounded-lg w-full h-[500px] object-cover"
+            />
+          </div>
+
+          <div data-aos="fade-left" class="order-1 md:order-2">
+            <p class="text-gray-400 text-sm mb-4 tracking-wider">
+              02. Tentang Saya
+            </p>
+            <h2 class="section-title mb-6">
+              Passionate & Dedicated<br />
+              Web Developer
+            </h2>
+            <p class="text-gray-300 mb-8 leading-relaxed">
+              Saya adalah seorang web developer yang berfokus pada pengembangan
+              aplikasi menggunakan <strong>PHP</strong> dan
+              <strong>Laravel</strong>, dengan dukungan
+              <strong>JavaScript</strong> dan <strong>CSS</strong> untuk
+              tampilan interaktif. Saya memiliki semangat tinggi untuk
+              menciptakan website yang cepat, responsif, dan mudah digunakan.
+              Saya juga terus belajar teknologi baru agar dapat memberikan hasil
+              terbaik untuk setiap proyek yang saya tangani.
+            </p>
+            <button class="btn-primary">HUBUNGI SAYA</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Experience Section  -->
+    <section
+      class="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-black to-gray-900"
+    >
+      <div class="max-w-7xl mx-auto">
+        <div class="grid md:grid-cols-2 gap-12">
+          <!-- Pengalaman -->
+          <div data-aos="fade-right">
+            <p class="text-gray-400 text-sm mb-4 tracking-wider">
+              03. Pengalaman
+            </p>
+            <h2 class="text-4xl font-bold mb-8">Pengalaman Saya</h2>
+
+            <div class="space-y-6">
+              <div class="card-dark flex justify-between items-center">
+                <div>
+                  <h3 class="text-xl font-semibold mb-1">
+                    Projek Web Sederhana
+                  </h3>
+                  <p class="text-gray-400 text-sm">Menggunakan PHP & Laravel</p>
+                </div>
+                <span class="text-yellow-400 font-semibold">2025</span>
+              </div>
+
+              <div class="card-dark flex justify-between items-center">
+                <div>
+                  <h3 class="text-xl font-semibold mb-1">
+                    Latihan Desain Website
+                  </h3>
+                  <p class="text-gray-400 text-sm">
+                    Menggunakan HTML, CSS, dan JS
+                  </p>
+                </div>
+                <span class="text-yellow-400 font-semibold">2024</span>
+              </div>
+
+              <div class="card-dark flex justify-between items-center">
+                <div>
+                  <h3 class="text-xl font-semibold mb-1">
+                    Mini Project Sekolah
+                  </h3>
+                  <p class="text-gray-400 text-sm">Menggunakan HTML, CSS</p>
+                </div>
+                <span class="text-yellow-400 font-semibold">2023</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Pendidikan -->
+          <div data-aos="fade-left">
+            <p class="text-gray-400 text-sm mb-4 tracking-wider">
+              04. Pendidikan
+            </p>
+            <h2 class="text-4xl font-bold mb-8">Riwayat Pendidikan</h2>
+
+            <div class="space-y-6">
+              <div class="card-dark flex justify-between items-center">
+                <div>
+                  <h3 class="text-xl font-semibold mb-1">SMK PGRI Wlingi</h3>
+                  <p class="text-gray-400 text-sm">
+                    Rekayasa Perangkat Lunak (RPL)
+                  </p>
+                </div>
+                <span class="text-yellow-400 font-semibold"
+                  >2023 - Sekarang</span
+                >
+              </div>
+
+              <div class="card-dark flex justify-between items-center">
+                <div>
+                  <h3 class="text-xl font-semibold mb-1">
+                    SMP Negeri 1 Wlingi
+                  </h3>
+                  <p class="text-gray-400 text-sm">
+                    Pendidikan Menengah Pertama
+                  </p>
+                </div>
+                <span class="text-yellow-400 font-semibold">2020 - 2023</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services Section  -->
+    <section id="services" class="py-20 px-4 sm:px-6 lg:px-8">
+      <div class="max-w-7xl mx-auto">
+        <div class="mb-12" data-aos="fade-up">
+          <p class="text-gray-400 text-sm mb-4 tracking-wider">05. Kemampuan</p>
+          <h2 class="section-title mb-4">
+            Keahlian Saya dalam<br />
+            Pengembangan Web & Coding
+          </h2>
+          <p class="text-gray-400 max-w-2xl">
+            Saya fokus pada pembuatan website dan aplikasi menggunakan PHP,
+            Laravel, HTML, CSS, dan JavaScript. Hobi saya juga menambah
+            kreativitas dalam menyelesaikan setiap project dengan baik.
+          </p>
+        </div>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div class="card-dark" data-aos="fade-up" data-aos-delay="100">
+            <div class="flex justify-between items-start mb-4">
+              <h3 class="text-2xl font-bold">PHP & Laravel</h3>
+              <span class="text-yellow-400 text-3xl">→</span>
+            </div>
+            <p class="text-gray-400 text-sm">
+              Membangun website dan aplikasi backend yang dinamis dan responsif
+              menggunakan PHP dan Laravel.
+            </p>
+          </div>
+
+          <div class="card-dark" data-aos="fade-up" data-aos-delay="200">
+            <div class="flex justify-between items-start mb-4">
+              <h3 class="text-2xl font-bold">HTML, CSS & JS</h3>
+              <span class="text-yellow-400 text-3xl">→</span>
+            </div>
+            <p class="text-gray-400 text-sm">
+              Membuat tampilan website yang menarik, interaktif, dan responsif
+              dengan HTML, CSS, dan JavaScript.
+            </p>
+          </div>
+
+          <div class="card-dark" data-aos="fade-up" data-aos-delay="300">
+            <div class="flex justify-between items-start mb-4">
+              <h3 class="text-2xl font-bold">Web Design</h3>
+              <span class="text-yellow-400 text-3xl">→</span>
+            </div>
+            <p class="text-gray-400 text-sm">
+              Mendesain antarmuka website yang user-friendly dan menarik bagi
+              pengguna.
+            </p>
+          </div>
+
+          <div class="card-dark" data-aos="fade-up" data-aos-delay="100">
+            <div class="flex justify-between items-start mb-4">
+              <h3 class="text-2xl font-bold">Project Sekolah & Mini App</h3>
+              <span class="text-yellow-400 text-3xl">→</span>
+            </div>
+            <p class="text-gray-400 text-sm">
+              Membuat project coding untuk latihan dan tugas sekolah, termasuk
+              CRUD sederhana dan website portofolio.
+            </p>
+          </div>
+
+          <div class="card-dark" data-aos="fade-up" data-aos-delay="200">
+            <div class="flex justify-between items-start mb-4">
+              <h3 class="text-2xl font-bold">Hobi & Kreativitas</h3>
+              <span class="text-yellow-400 text-3xl">→</span>
+            </div>
+            <p class="text-gray-400 text-sm">
+              Sepak bola dan futsal membantu saya tetap kreatif dan fokus saat
+              mengerjakan project.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Portfolio Section  -->
+    <section
+      id="portfolio"
+      class="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-black to-gray-900"
+    >
+      <div class="max-w-7xl mx-auto">
+        <div class="mb-12" data-aos="fade-up">
+          <p class="text-gray-400 text-sm mb-4 tracking-wider">
+            06. My Projects
+          </p>
+          <h2 class="section-title mb-4">
+            Beberapa Project Saya<br />
+            untuk Inspirasi
+          </h2>
+          <p class="text-gray-400 max-w-2xl">
+            Berikut adalah beberapa project latihan dan tugas sekolah yang saya
+            buat menggunakan PHP, Laravel, HTML, CSS, dan JavaScript. Project
+            ini mencerminkan kemampuan saya dalam membuat website dinamis,
+            aplikasi berbasis web, serta desain tampilan yang responsif dan
+            interaktif.
+          </p>
+          <button class="btn-primary mt-6">LIHAT SEMUA PROJECT</button>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-6">
+          <div
+            class="card-dark group cursor-pointer"
+            data-aos="fade-up"
+            data-aos-delay="100"
+          >
+            <img
+              src="images/image.png"
+              alt="SiLaundry"
+              class="w-full rounded-lg mb-4"
+            />
+            <h3
+              class="text-2xl font-bold mb-2 group-hover:text-yellow-400 transition-colors"
+            >
+              Aplikasi SiLaundry
+            </h3>
+            <p class="text-gray-400 text-sm">
+              Website sederhana untuk manajemen laundry menggunakan PHP. Latihan
+              ini membantu saya memahami logika backend dan interaksi form.
+            </p>
+          </div>
+
+          <div
+            class="card-dark group cursor-pointer"
+            data-aos="fade-up"
+            data-aos-delay="200"
+          >
+            <img
+              src="images/image2.png"
+              alt="Landing Page"
+              class="w-full rounded-lg mb-4"
+            />
+            <h3
+              class="text-2xl font-bold mb-2 group-hover:text-yellow-400 transition-colors"
+            >
+              Landing Page
+            </h3>
+            <p class="text-gray-400 text-sm">
+              Membuat landing page interaktif menggunakan HTML, CSS, dan
+              JavaScript. Latihan ini membantu memahami layout responsif,
+              animasi sederhana, dan interaktivitas pengguna.
+            </p>
+          </div>
+
+          <div
+            class="card-dark group cursor-pointer"
+            data-aos="fade-up"
+            data-aos-delay="300"
+          >
+            <img
+              src="images/image3.png"
+              alt="HTML CSS JS Project"
+              class="w-full rounded-lg mb-4"
+            />
+            <h3
+              class="text-2xl font-bold mb-2 group-hover:text-yellow-400 transition-colors"
+            >
+              Website Sekolah
+            </h3>
+            <p class="text-gray-400 text-sm">
+              Website portfolio menggunakan HTML, CSS, dan JavaScript dengan
+              desain responsif, latihan ini melatih kemampuan front-end dan
+              interaktivitas halaman.
+            </p>
+          </div>
+
+          <div
+            class="card-dark group cursor-pointer"
+            data-aos="fade-up"
+            data-aos-delay="400"
+          >
+            <img
+              src="images/image4.png"
+              alt="School Project RPL"
+              class="w-full rounded-lg mb-4"
+            />
+            <h3
+              class="text-2xl font-bold mb-2 group-hover:text-yellow-400 transition-colors"
+            >
+              Project Sekolah RPL
+            </h3>
+            <p class="text-gray-400 text-sm">
+              Mini project RPL berupa website CRUD dan aplikasi web sederhana.
+              Project ini membantu memahami alur database, backend, dan desain
+              UI sederhana.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ Section  -->
+    <section
+      class="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-black to-gray-900"
+    >
+      <div class="max-w-4xl mx-auto">
+        <div class="mb-12" data-aos="fade-up">
+          <p class="text-gray-400 text-sm mb-4 tracking-wider">07. FAQs</p>
+          <h2 class="section-title mb-4">
+            Pertanyaan Umum<br />
+            Seputar Saya
+          </h2>
+        </div>
+
+        <div class="space-y-4">
+          <div
+            class="card-dark cursor-pointer"
+            data-aos="fade-up"
+            data-aos-delay="100"
+          >
+            <div class="flex justify-between items-center">
+              <h3 class="text-lg font-semibold">Apa kemampuan coding kamu?</h3>
+              <span class="text-yellow-400 text-2xl">+</span>
+            </div>
+          </div>
+
+          <div
+            class="card-dark cursor-pointer"
+            data-aos="fade-up"
+            data-aos-delay="200"
+          >
+            <div class="flex justify-between items-center">
+              <h3 class="text-lg font-semibold">
+                Bahasa pemrograman apa yang kamu kuasai?
+              </h3>
+              <span class="text-yellow-400 text-2xl">+</span>
+            </div>
+          </div>
+
+          <div
+            class="card-dark cursor-pointer"
+            data-aos="fade-up"
+            data-aos-delay="300"
+          >
+            <div class="flex justify-between items-center">
+              <h3 class="text-lg font-semibold">
+                Apakah kamu punya project latihan atau sekolah?
+              </h3>
+              <span class="text-yellow-400 text-2xl">+</span>
+            </div>
+          </div>
+
+          <div
+            class="card-dark cursor-pointer"
+            data-aos="fade-up"
+            data-aos-delay="400"
+          >
+            <div class="flex justify-between items-center">
+              <h3 class="text-lg font-semibold">
+                Apa hobi kamu selain coding?
+              </h3>
+              <span class="text-yellow-400 text-2xl">+</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section  -->
+    <section class="py-20 px-4 sm:px-6 lg:px-8">
+      <div class="max-w-7xl mx-auto text-center" data-aos="zoom-in">
+        <h2 class="section-title mb-6">
+          Yuk, Kerjasama<br />
+          dengan Saya
+        </h2>
+        <p class="text-gray-400 mb-8 max-w-2xl mx-auto">
+          Saya siap membantu membuat website atau project digital menggunakan
+          PHP, Laravel, HTML, CSS, dan JavaScript. Bersama-sama kita bisa
+          membuat sesuatu yang keren dan fungsional.
+        </p>
+        <button class="btn-primary">HUBUNGI SAYA</button>
+      </div>
+    </section>
+
+    <!-- Footer  -->
+    <footer
+      id="contact"
+      class="py-12 px-4 sm:px-6 lg:px-8 border-t border-gray-800"
+    >
+      <div class="max-w-7xl mx-auto">
+        <div class="grid md:grid-cols-4 gap-8 mb-8">
+          <div>
+            <div class="flex items-center space-x-2 mb-4">
+              <div
+                class="w-8 h-8 bg-yellow-400 rounded flex items-center justify-center"
+              >
+                <span class="text-black font-bold text-sm">BNA</span>
+              </div>
+              <span class="text-white font-semibold">Port0folio</span>
+            </div>
+            <p class="text-gray-400 text-sm">
+              Membuat pengalaman digital yang menarik melalui desain dan
+              pengembangan website.
+            </p>
+          </div>
+
+          <div>
+            <h4 class="font-semibold mb-4">Quick Links</h4>
+            <ul class="space-y-2 text-sm text-gray-400">
+              <li><a href="#home" class="hover:text-yellow-400">Home</a></li>
+              <li><a href="#about" class="hover:text-yellow-400">About</a></li>
+              <li>
+                <a href="#services" class="hover:text-yellow-400">Services</a>
+              </li>
+              <li>
+                <a href="#portfolio" class="hover:text-yellow-400">Portfolio</a>
+              </li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 class="font-semibold mb-4">Services</h4>
+            <ul class="space-y-2 text-sm text-gray-400">
+              <li>PHP & Laravel</li>
+              <li>HTML & CSS</li>
+              <li>JavaScript</li>
+              <li>Web Development</li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 class="font-semibold mb-4">Contact</h4>
+            <ul class="space-y-2 text-sm text-gray-400">
+              <li>0895366226085</li>
+              <li>@bachtiarnovall</li>
+              <li>Blitar, Indonesia</li>
+            </ul>
+          </div>
+        </div>
+
+        <div
+          class="flex flex-col md:flex-row justify-between items-center pt-8 border-t border-gray-800"
+        >
+          <p class="text-gray-400 text-sm mb-4 md:mb-0">
+            © 2025 BachtiarNoval.
+          </p>
+          <div class="flex space-x-4">
+            <!-- TikTok -->
+            <a
+              href="https://www.tiktok.com/@bchtnv"
+              class="rounded-full p-3 bg-gradient-to-br from-pink-500 via-blue-500 to-cyan-500 hover:opacity-90 transition"
+            >
+              <svg
+                class="w-6 h-6 text-black"
+                fill="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M12.1 2c.1 2.4 2.2 4.3 4.7 4.4v2.9c-1.1 0-2.1-.3-3-.8-.9-.5-1.7-1.3-2.1-2.3v7.8c0 4.5-3.6 8.1-8.1 8.1S0 17.5 0 13s3.6-8.1 8.1-8.1c.3 0 .6 0 .9.1v3.2z"
+                />
+              </svg>
+            </a>
+
+            <!-- GitHub -->
+            <a
+              href="https://github.com/bnovl-bit"
+              class="rounded-full p-3 bg-gray-800 hover:bg-gray-700 transition"
+            >
+              <svg
+                class="w-6 h-6 text-white"
+                fill="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.44 9.8 8.21 11.39.6.11.79-.26.79-.58v-2.23C5.82 20.59 5.12 19.43 5.12 19.43c-.55-1.39-1.33-1.76-1.33-1.76-1.09-.74.08-.73.08-.73 1.2.08 1.84 1.24 1.84 1.24 1.07 1.83 2.81 1.3 3.49 1 .11-.77.42-1.3.76-1.6-2.66-.3-5.46-1.33-5.46-5.93 0-1.31.47-2.38 1.23-3.22-.12-.3-.54-1.52.12-3.18 0 0 1.01-.32 3.3 1.23.96-.27 1.98-.4 3-.4 1.02.01 2.05.14 3.01.4 2.28-1.55 3.29-1.23 3.29-1.23.66 1.65.24 2.87.12 3.18.77.84 1.23 1.91 1.23 3.22 0 4.6-2.81 5.63-5.48 5.92.43.37.82 1.1.82 2.22v3.29c0 .32.19.69.8.58 4.77-1.59 8.2-6.08 8.2-11.39 0-6.63-5.37-12-12-12z"
+                />
+              </svg>
+            </a>
+
+            <!-- Instagram -->
+            <a
+              href="https://www.instagram.com/bachtiarnovall/"
+              class="rounded-full p-3 bg-gradient-to-tr from-yellow-400 via-pink-500 to-purple-600 hover:opacity-90 transition"
+            >
+              <svg
+                class="w-6 h-6 text-white"
+                fill="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M12 2.2c3.2 0 3.584.01 4.85.07 1.17.06 1.963.24 2.418.4a4.92 4.92 0 0 1 1.77 1.04 4.92 4.92 0 0 1 1.04 1.77c.16.455.34 1.25.4 2.42.06 1.27.07 1.65.07 4.85s-.01 3.58-.07 4.85c-.06 1.17-.24 1.96-.4 2.42a4.92 4.92 0 0 1-1.04 1.77 4.92 4.92 0 0 1-1.77 1.04c-.455.16-1.25.34-2.42.4-1.27.06-1.65.07-4.85.07s-3.58-.01-4.85-.07c-1.17-.06-1.96-.24-2.42-.4a4.92 4.92 0 0 1-1.77-1.04 4.92 4.92 0 0 1-1.04-1.77c-.16-.455-.34-1.25-.4-2.42C2.21 15.78 2.2 15.4 2.2 12s.01-3.58.07-4.85c.06-1.17.24-1.96.4-2.42a4.92 4.92 0 0 1 1.04-1.77 4.92 4.92 0 0 1 1.77-1.04c.455-.16 1.25-.34 2.42-.4C8.42 2.21 8.8 2.2 12 2.2zm0-2.2C8.736 0 8.332.01 7.052.07 5.78.13 4.785.32 4.042.58a7.15 7.15 0 0 0-2.58 1.67A7.15 7.15 0 0 0 .58 4.042C.32 4.785.13 5.78.07 7.052.01 8.332 0 8.736 0 12c0 3.264.01 3.668.07 4.948.06 1.272.25 2.267.51 3.01a7.15 7.15 0 0 0 1.67 2.58 7.15 7.15 0 0 0 2.58 1.67c.743.26 1.738.45 3.01.51 1.28.06 1.684.07 4.948.07s3.668-.01 4.948-.07c1.272-.06 2.267-.25 3.01-.51a7.15 7.15 0 0 0 2.58-1.67 7.15 7.15 0 0 0 1.67-2.58c.26-.743.45-1.738.51-3.01.06-1.28.07-1.684.07-4.948s-.01-3.668-.07-4.948c-.06-1.272-.25-2.267-.51-3.01a7.15 7.15 0 0 0-1.67-2.58 7.15 7.15 0 0 0-2.58-1.67c-.743-.26-1.738-.45-3.01-.51C15.668.01 15.264 0 12 0z"
+                />
+                <circle cx="12" cy="12" r="3.2" />
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      // Initialize AOS
+      AOS.init({
+        duration: 1000,
+        once: true,
+        offset: 100,
+      });
+
+      // Smooth scrolling for navigation links
+      document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+        anchor.addEventListener("click", function (e) {
+          e.preventDefault();
+          const target = document.querySelector(this.getAttribute("href"));
+          if (target) {
+            target.scrollIntoView({
+              behavior: "smooth",
+              block: "start",
+            });
+          }
+        });
+      });
+    </script>
+  </body>
+</html>
